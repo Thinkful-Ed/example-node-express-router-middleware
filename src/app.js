@@ -12,7 +12,7 @@ const checkForAbbreviationLength = (req, res, next) => {
 };
 
 // Routes
-app.use(
+app.get(
   "/states/:abbreviation",
   checkForAbbreviationLength,
   (req, res, next) => {
@@ -20,7 +20,7 @@ app.use(
   }
 );
 
-app.use(
+app.get(
   "/travel/:abbreviation",
   checkForAbbreviationLength,
   (req, res, next) => {
